@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- ==== Insert Code Below === -->
+
+<script>
+    // numbers = [19, 5, 42, 2, 77];
+
+    function sumTwoSmallestNumbers(numbers) {  
+    // Arrange array from smallest to largest integers
+    let arr = [19, 5, 42, 2, 77];
+    
+    console.log('Original numbers: ' + arr);
+
+    arr.sort((a,b) => a-b);
+ 
+    console.log('Sorted numbers: ' + arr);
+
+    // Remove nonpositive integers
+    
+    arr = arr.filter((x) => { return x >= 0});
+
+    console.log('Only positive integer numbers: ' + arr);
+    
+    // Sum of index 0 & 1
+    
+    sum = arr[0] + arr[1];
+    
+    console.log('Sum of two lowest positive integers: ' + sum);
+  };
+
+  sumTwoSmallestNumbers();
+
+</script>
+
+
+</body>
+</html>

@@ -32,7 +32,7 @@ function DNAStrand(dna) {
     return newArray.join('');
     }
 
-    DNAStrand ('ATTGC') // return 'TAACG'
+DNAStrand ('ATTGC') // return 'TAACG'
 
 DNAStrand('GTAT') // return 'CATA'
     
@@ -45,3 +45,71 @@ DNAStrand('GTAT') // return 'CATA'
 // You have passed all of the tests! :)
 
 // Different Solutions
+function DNAStrand(dna) {
+    return dna.replace(/./g, function(c) {
+      return DNAStrand.pairs[c]
+    })
+  }
+  
+  DNAStrand.pairs = {
+    A: 'T',
+    T: 'A',
+    C: 'G',
+    G: 'C',
+}
+// ===
+var pairs = {'A':'T','T':'A','C':'G','G':'C'};
+
+function DNAStrand(dna){
+  return dna.split('').map(function(v){ return pairs[v] }).join('');
+}
+// ===
+function DNAStrand(dna){
+    //your code here
+    var result= "";
+        for(var i =0; i<dna.length; i++) 
+        {
+          if (dna[i]==="A") 
+         {
+          result +="T";
+         }
+          else if (dna[i]==="T") 
+         {
+          result += "A";
+          }
+          else if (dna[i]==="C")
+          {
+          result +="G";
+          }
+          else if (dna[i]==="G")
+          {
+          result += "C";
+          }
+          else {
+          result +=dna[i];
+          }
+       }
+       return result;
+}
+// ===
+function DNAStrand(dna){
+    //your code here
+    var res="";
+    for(var i=0; i<dna.length; i++) {
+      switch(dna[i]) {
+        case 'A':
+          res += "T";
+          break;
+        case 'T':
+          res += "A";
+          break;
+        case 'G':
+          res += "C";
+          break;
+        case 'C':
+          res += "G";
+          break;
+      }
+    }
+    return res;
+  }    
