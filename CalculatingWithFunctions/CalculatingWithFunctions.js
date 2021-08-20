@@ -67,11 +67,12 @@ function times(firstNumber) {
   }
   
 // Division should be integer division '/' and NOT '%'
+// Return using floor
 function dividedBy(firstNumber) {
     return function(secondNumber) {
-      return secondNumber / firstNumber;
+      return Math.floor(secondNumber / firstNumber);
     }
-}
+  }
   
 // Tests
 describe("Tests", () => {
