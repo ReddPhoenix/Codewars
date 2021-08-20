@@ -14,7 +14,27 @@ function eight(operation) {}
 function nine(operation) {}
 
 // Function for each operation
-function plus() {}
-function minus() {}
-function times() {}
-function dividedBy() {}
+function plus(firstNumber) {
+    return function(secondNumber) {
+      return secondNumber + firstNumber;
+    }
+  }
+  
+  function minus(firstNumber) {
+    return function(secondNumber) {
+      return secondNumber - firstNumber;
+    }
+  }
+                                                                                                                                                                                                       
+  function times(firstNumber) {
+    return function(secondNumber) {
+      return secondNumber * firstNumber;   
+    }
+  }
+  
+  // Division should be integer division '/' and NOT '%'
+  function dividedBy(firstNumber) {
+    return function(secondNumber) {
+      return secondNumber / firstNumber;
+    }
+  }
