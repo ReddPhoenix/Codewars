@@ -1,3 +1,4 @@
 function pigIt(str){
-    //Code here
+    const array = str.split(' ');
+    
   }
